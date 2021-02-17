@@ -16,16 +16,43 @@
             </head>
             <body onload="customLoadingScriptsCall()">
            
-             <script type="application/javascript">
-    var ad_idzone = "4188754",
-    ad_width = "300",
-    ad_height = "250",
-    cookieconsent = true;
+             <link rel="stylesheet" href="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css">
+<script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script>
+
+<video id="my-video" controls="" style="width: 640px; height: 360px;">
+    <source src="main_video.mp4" type="video/mp4">
+</video>
+
+<script type="application/javascript">
+    var testVideo = fluidPlayer(
+        "my-video",
+        {
+            vastOptions: {
+                "adList": [
+                    {
+                        "roll": "preRoll",
+                        "vastTag": "https://syndication.realsrv.com/splash.php?idzone=4188770&cookieconsent=true"
+                    },
+                    {
+                        "roll": "midRoll",
+                        "vastTag": "https://syndication.realsrv.com/splash.php?idzone=4188770&cookieconsent=true",
+                        "timer": 8
+                    },
+                    {
+                        "roll": "midRoll",
+                        "vastTag": "https://syndication.realsrv.com/splash.php?idzone=4188770&cookieconsent=true",
+                        "timer": 10
+                    },
+                    {
+                        "roll": "postRoll",
+                        "vastTag": "https://syndication.realsrv.com/splash.php?idzone=4188770&cookieconsent=true"
+                    }
+            ]
+        }
+}
+    );
 </script>
-<script type="application/javascript" src="https://a.realsrv.com/ads.js"></script>
-<noscript>
-    <iframe src="https://syndication.realsrv.com/ads-iframe-display.php?idzone=4188754&output=noscript" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
-</noscript>
+
                  
               <div class="bannerWrapper text-center" style="height:calc(100vh - 0px)">
               <div class="labelText text-center">
